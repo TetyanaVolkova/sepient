@@ -37,7 +37,10 @@ body {
 }
 .btn-default:hover {
   background-color: transparent;
-  border-color: transparent;
+  border-left-color: #678792;
+  border-top-color: #678792;
+  border-bottom-color: #678792;
+  border-right-color: rgba(0, 0, 0, 0.4);
 }
 .facebook img {
   margin-bottom: 12px;
@@ -179,7 +182,7 @@ body {
 .dropdown-menu>li>a {
   text-align: center;
 }
-.dropdown-custom, .dropdown-custom:hover, .btn-default:hover  {
+.dropdown-custom, .dropdown-custom:hover, .btn-default:hover, .dropdown-toggle:hover, btn-default:hover {
   background-color: #678792;
   color: white;
   border-radius: 0;
