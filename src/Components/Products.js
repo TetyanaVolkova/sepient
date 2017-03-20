@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import {Row, Col, Grid, ButtonToolbar, MenuItem, Dropdown, Button, FormGroup, FormControl, InputGroup, DropdownButton } from 'react-bootstrap';
+import {Row, Col, Grid, ButtonToolbar, MenuItem, Dropdown, Button } from 'react-bootstrap';
 import ProdImage from '../../public/images/tough-mojo-jacket-img1.png';
-import NumericInput from 'react-numeric-input';
 
 class Products extends Component {
   render() {
@@ -26,7 +25,7 @@ class Products extends Component {
 
             <ButtonToolbar>
 
-            <Dropdown>
+            <Dropdown id="select size">
               <Button className="dropdown-custom">
                 Select Size
               </Button>
@@ -44,7 +43,7 @@ class Products extends Component {
               </Dropdown.Menu>
             </Dropdown>
 
-              <Dropdown>
+              <Dropdown id="select color">
                 <Button className="dropdown-custom">
                   Select Color
                 </Button>
@@ -62,7 +61,7 @@ class Products extends Component {
 
             </ButtonToolbar>
             <ButtonToolbar>
-              <Dropdown>
+              <Dropdown id="select number">
                 <Button className="numeric">
                   0
                 </Button>

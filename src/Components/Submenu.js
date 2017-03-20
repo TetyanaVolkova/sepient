@@ -5,10 +5,10 @@ class Submenu extends Component {
   render() {
     return (
       <Grid>
-        <Row>
+        <Row className="submenu-container">
           <Nav bsStyle="tabs" activeKey="1" onSelect={this.handleSelect}>
-          <NavDropdown eventKey="4" title="Camping" id="nav-dropdown">
-            <MenuItem eventKey="4.1">Action</MenuItem>
+          <NavDropdown eventKey="4" title="Camping" id="camping" className="nav-dropdown">
+            <MenuItem active eventKey="4.1">Action</MenuItem>
             <MenuItem divider />
             <MenuItem eventKey="4.2">Another action</MenuItem>
             <MenuItem divider />
@@ -16,7 +16,7 @@ class Submenu extends Component {
             <MenuItem divider />
             <MenuItem eventKey="4.4">And more</MenuItem>
           </NavDropdown>
-            <NavDropdown eventKey="4" title="Clothing" id="nav-dropdown">
+            <NavDropdown eventKey="4" title="Clothing" id="clothing" className="nav-dropdown">
               <MenuItem active eventKey="4.1">Outerwear</MenuItem>
               <MenuItem divider />
               <MenuItem eventKey="4.2">Hiking Shoes / Boots</MenuItem>
@@ -25,8 +25,8 @@ class Submenu extends Component {
               <MenuItem divider />
               <MenuItem eventKey="4.4">Hats</MenuItem>
             </NavDropdown>
-            <NavDropdown eventKey="4" title="Fishing" id="nav-dropdown">
-              <MenuItem eventKey="4.1">Action</MenuItem>
+            <NavDropdown eventKey="4" title="Fishing" id="fishing" className="nav-dropdown">
+              <MenuItem active eventKey="4.1">Action</MenuItem>
               <MenuItem divider />
               <MenuItem eventKey="4.2">Another action</MenuItem>
               <MenuItem divider />
@@ -34,8 +34,8 @@ class Submenu extends Component {
               <MenuItem divider />
               <MenuItem eventKey="4.4">And more</MenuItem>
             </NavDropdown>
-            <NavDropdown eventKey="4" title="Hiking" id="nav-dropdown">
-              <MenuItem eventKey="4.1">Action</MenuItem>
+            <NavDropdown eventKey="4" title="Hiking" id="hiking" className="nav-dropdown">
+              <MenuItem active eventKey="4.1">Action</MenuItem>
               <MenuItem divider />
               <MenuItem eventKey="4.2">Another action</MenuItem>
               <MenuItem divider />
@@ -43,8 +43,8 @@ class Submenu extends Component {
               <MenuItem divider />
               <MenuItem eventKey="4.4">And more</MenuItem>
             </NavDropdown>
-            <NavDropdown eventKey="4" title="Biking" id="nav-dropdown">
-              <MenuItem eventKey="4.1">Action</MenuItem>
+            <NavDropdown eventKey="4" title="Biking" id="biking" className="nav-dropdown">
+              <MenuItem active eventKey="4.1">Action</MenuItem>
               <MenuItem divider />
               <MenuItem eventKey="4.2">Another action</MenuItem>
               <MenuItem divider />
