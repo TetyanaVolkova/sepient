@@ -18,7 +18,7 @@ class Header extends Component {
           <Navbar.Collapse>
             <Navbar.Form pullLeft>
               <FormGroup>
-              <InputGroup>
+              <InputGroup className="search-input">
                 <FormControl type="text" />
                 <InputGroup.Button>
                   <Button><img src={Icon} alt="icon"/></Button>
@@ -27,8 +27,8 @@ class Header extends Component {
             </FormGroup>
             </Navbar.Form>
           </Navbar.Collapse>
-          <NavItem><Button><img src={Facebook} alt="Facebook"/></Button></NavItem>
-          <NavItem className="facebook" href="#"><Button><img src={Twitter} alt="Twitter"/></Button></NavItem>
+          <NavItem className="facebook" href="https://www.facebook.com/" target="_blank"><Button><img src={Facebook} alt="Facebook"/></Button></NavItem>
+          <NavItem href="https://www.twitter.com/" target="_blank"><Button><img src={Twitter} alt="Twitter"/></Button></NavItem>
           <NavItem>My Account</NavItem>
           <NavItem>Cart</NavItem>
           <NavItem>Logout</NavItem>

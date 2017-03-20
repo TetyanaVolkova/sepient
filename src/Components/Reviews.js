@@ -23,7 +23,7 @@ class Reviews extends Component {
  open() {
     this.setState({showModal: true}, function(){
       console.log(this.state);
-    }).bind(this);
+    });
   }
 
   render() { console.log(this.state);
