@@ -20,8 +20,8 @@ class Footer extends Component {
             <NavItem>Privacy Policy</NavItem>
             <NavItem>Terms of Service</NavItem>
             <NavItem>Site Map</NavItem>
-            <NavItem><Button><img src={Facebook} alt="Facebook"/></Button></NavItem>
-            <NavItem className="facebook" href="#"><Button><img src={Twitter} alt="Twitter"/></Button></NavItem>
+            <NavItem className="facebook"><Button><img src={Facebook} alt="Facebook"/></Button></NavItem>
+            <NavItem href="#"><Button><img src={Twitter} alt="Twitter"/></Button></NavItem>
           </Nav>
         </Row>
       </Navbar>

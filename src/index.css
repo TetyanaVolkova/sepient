@@ -36,6 +36,10 @@ body {
   border-color: transparent;
 }
 .btn-default:hover {
+  border-color: transparent;
+  opacity: 0.6;
+}
+.dropdown-custom:hover {
   background-color: transparent;
   border-left-color: #678792;
   border-top-color: #678792;
@@ -159,6 +163,13 @@ body {
   border: 0;
   border-radius: 0;
   margin: 0;
+}
+.footer-navbar .btn-default:hover, .footer-navbar .btn-default:visited, .footer-navbar .btn-default:active, .footer-navbar .btn-default:focus {
+  background-color: transparent;
+  background: transparent;
+}
+.footer-navbar li a {
+  margin-top: 5px;
 }
 .footer-navbar .row {
   margin: 0 10vw;
