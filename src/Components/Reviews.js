@@ -39,7 +39,7 @@ class Reviews extends Component {
                       <figcaption>{review.name}</figcaption>
                     </figure>
                   </Col>
-                  <Col md={10}>
+                  <Col className="review-p" md={10}>
                     <h3><strong>{review.title}</strong> {review.date}</h3>
                     <p>{review.review}</p>
                   </Col>

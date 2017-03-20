@@ -10,6 +10,9 @@ body {
   background-color: black;
   margin: auto;
 }
+.header-navbar ul {
+  margin-top: 20px;
+}
 .header-navbar a {
   height: 100%;
   font-size: 1.5vw;
@@ -23,7 +26,7 @@ body {
   fill: red;
 }
 .search-input {
-  width: 40vw;
+  width: 35vw;
 }
 .search-input .input-group-btn {
   background-color: white;
@@ -56,7 +59,7 @@ body {
 .navbar-default .navbar-nav>li>a {
   color: white;
 }
-.navbar-default:hover .navbar-nav>li>a:hover {
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
   color: #888;
 }
 .nav-dropdown, .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
@@ -194,6 +197,9 @@ body {
   width: 97px;
   border-radius: 0;
 }
+.review-p {
+  text-align: left;
+}
 .add-to-cart-btn, .add-to-cart-btn:focus, .add-to-cart-btn:active {
   color: white;
   width: 130px;
@@ -209,6 +215,15 @@ body {
   transition: 15s;
 }
 
+@media screen and (min-width: 1800px){
+  .nav-tabs>li>a {
+    margin-left: 1vw;
+  }
+  .submenu-container {
+    margin-left: 1vw;
+  }
+}
+
 @media (max-width: 1204px) {
   .footer-navbar .container {
     width: 100%;
@@ -217,6 +232,21 @@ body {
   .footer-navbar .row {
     margin: 0;
     width: 100%;
+  }
+  .submenu-container {
+    width: 100vw;
+  }
+  .container {
+    width: 100vw;
+  }
+  .header-navbar .nav {
+    width: 50vw;
+  }
+  .header-navbar a {
+    margin: 0;
+  }
+  .col-p-elements {
+    padding-left: 10vw !important;
   }
 }
 
