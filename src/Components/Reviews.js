@@ -28,9 +28,11 @@ class Reviews extends Component {
 
   render() { console.log(this.state);
     let reviews;
+    let stars;
     if(this.props.data && this.state){
         reviews = this.props.data.map(review => {
         let image = 'images/' + review.image;
+        stars = 'images/star.png';
         return (
                 <Row key={review.name}>
                   <Col md={2}>
@@ -56,7 +58,7 @@ class Reviews extends Component {
 
           <Modal show={this.state.showModal} onHide={this.close}>
               <Modal.Header>
-                <Modal.Title>Please Rate the Tough Mojo Jacket </Modal.Title>
+                <Modal.Title>Please Rate the <strong>Tough Mojo Jacket </strong> <img src={stars} alt="raiting"/><img src={stars} alt="raiting"/><img src={stars} alt="raiting"/><img src={stars} alt="raiting"/><img src={stars} alt="raiting"/></Modal.Title>
               </Modal.Header>
               <Modal.Body>
               <Form horizontal>

@@ -206,6 +206,12 @@ body {
   background-color: #4698a4;
   border-radius: 0;
 }
+textarea.form-control {
+  height: 20vh;
+}
+.modal-footer {
+  border: none;
+}
 .review-link .btn {
   font-size: 20px;
   color: white;
