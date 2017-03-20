@@ -70,15 +70,6 @@ body {
 .submenu-container ul li:last-child::after{
   content: "";
 }
-.dropdown-custom, .dropdown-custom:hover, .btn-default:hover {
-  background-color: transparent !important;
-}
-.dropdown-custom::after, .dropdown-custom:hover, .btn-default:hover {
-  content: "";
-}
-.dropdown-custom::before, .dropdown-custom::before, .btn-default::before {
-  content: "";
-}
 .product-container {
   width: 100%;
   background-image: url(../public/images/topsection-background.png);
@@ -148,12 +139,14 @@ body {
 .footer-navbar .nav {
   float: right;
 }
-.review-link {
+.review-link .btn{
   text-align: left;
-  margin-top: 3px;
+  border: none;
 }
 .review-link:hover .btn {
   color: #888;
+  background-color: transparent;
+  border: none;
 }
 .dropdown-menu>li>a {
   text-align: center;
@@ -162,6 +155,7 @@ body {
   background-color: #678792;
   color: white;
   border-radius: 0;
+  border-left: 1px solid rgba(0, 0, 0, 0.4);
 }
 .btn-toolbar>.btn:nth-child(2), .btn-toolbar>.btn-group:nth-child(2), .btn-toolbar>.input-group:nth-child(2) {
   margin-left: 35px;
@@ -175,7 +169,7 @@ body {
   width: 97px;
   border-radius: 0;
 }
-.add-to-cart-btn {
+.add-to-cart-btn, .add-to-cart-btn:focus, .add-to-cart-btn:active {
   color: white;
   width: 130px;
   background-color: #4698a4;
