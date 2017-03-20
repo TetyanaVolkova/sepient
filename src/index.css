@@ -24,18 +24,26 @@ body {
 .facebook {
   margin-bottom: 7px;
 }
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
+  background-color: #4698a4;
+}
+.nav-tabs .dropdown-menu {
+  transition: 2s;
+}
 .col-p-elements {
   text-align: center;
+  width: 35%;
 }
 .col-p-elements h1 {
   color: white;
+  text-align: left;
 }
 .col-p-elements p {
   color: white;
+  text-align: left;
 }
 .product-container {
   width: 100%;
-  height: 70vh;
   background-image: url(../public/images/topsection-background.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -47,12 +55,13 @@ body {
 .product-container .row {
   width: 70%;
   height: inherit;
-  background-color: rgba(52, 75, 100, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
   margin: auto;
+  padding-top: 8vh;
+  padding-bottom: 8vh;
 }
 .description-container {
   width: 100%;
-  height: 80vh;
   background-color: gray;
   background-size: cover;
   background-repeat: no-repeat;
@@ -65,7 +74,7 @@ body {
 }
 .description-container .row {
   width: 70%;
-  margin: 20px auto;
+  margin: 8vh auto;
 }
 .review-container {
   width: 100%;
@@ -86,7 +95,8 @@ body {
   padding-left: 0;
 }
 .prod-img img {
-  width: 450px;
+  width: 400px !important;
+  margin-right: 135px;
 }
 .footer-navbar {
   width: 100%;
@@ -108,6 +118,33 @@ body {
 .review-link:hover .btn {
   color: #888;
 }
+.dropdown-menu>li>a {
+  text-align: center;
+}
+.dropdown-custom, .dropdown-custom:hover, .btn-default:hover  {
+  background-color: #678792;
+  color: white;
+  border-radius: 0;
+  border-left: 1px solid rgba(0, 0, 0, 0.4);
+}
+.btn-toolbar>.btn:nth-child(2), .btn-toolbar>.btn-group:nth-child(2), .btn-toolbar>.input-group:nth-child(2) {
+  margin-left: 35px;
+}
+.btn-toolbar {
+  margin-top: 40px;
+}
+.numeric, .numeric:hover, .numeric:focus  {
+  color: black;
+  background-color: white;
+  width: 97px;
+  border-radius: 0;
+}
+.add-to-cart-btn {
+  color: white;
+  width: 130px;
+  background-color: #4698a4;
+  border-radius: 0;
+}
 .review-link .btn {
   font-size: 20px;
   color: white;
@@ -128,5 +165,12 @@ body {
 @media (max-width: 992px) {
   .container {
     height: 100%;
+  }
+
+  .col-p-elements {
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    padding-top: 3vh;
   }
 }
