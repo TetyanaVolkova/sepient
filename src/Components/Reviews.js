@@ -65,7 +65,7 @@ class Reviews extends Component {
                     Review Title:
                   </Col>
                   <Col sm={10}>
-                    <FormControl type="email" placeholder="" />
+                    <FormControl type="text" placeholder="" />
                   </Col>
                     </FormGroup>
                     <Col sm={12}>

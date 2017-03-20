@@ -31,15 +31,15 @@ body {
   transition: 2s;
 }
 .nav-tabs>li>a {
-  font-size: 1.5vw;
+  font-size: 1.4vw;
   display: inline;
 }
 .nav-tabs>li {
-  height: 45px;
+  height: 50px;
   margin-top: 10px;
 }
 .nav-dropdown, .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
-  margin-left: 1.3vw;
+  margin-left: 1vw;
   border: 0 !important;
 }
 .nav-dropdown a:hover {
@@ -58,15 +58,25 @@ body {
   text-align: left;
 }
 .submenu-container {
-  width: 100%;
+  width: 70vw;
+  margin-left: 10vw;
 }
-.submenu-container ul li::after{
+.nav-dropdown::after{
   content: "|";
   font-size: 1.5vw;
   font-weight: 500;
   margin-left: 2vw;
 }
 .submenu-container ul li:last-child::after{
+  content: "";
+}
+.dropdown-custom, .dropdown-custom:hover, .btn-default:hover {
+  background-color: transparent !important;
+}
+.dropdown-custom::after, .dropdown-custom:hover, .btn-default:hover {
+  content: "";
+}
+.dropdown-custom::before, .dropdown-custom::before, .btn-default::before {
   content: "";
 }
 .product-container {
@@ -152,7 +162,6 @@ body {
   background-color: #678792;
   color: white;
   border-radius: 0;
-  border-left: 1px solid rgba(0, 0, 0, 0.4);
 }
 .btn-toolbar>.btn:nth-child(2), .btn-toolbar>.btn-group:nth-child(2), .btn-toolbar>.input-group:nth-child(2) {
   margin-left: 35px;
