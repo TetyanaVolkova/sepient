@@ -5,10 +5,35 @@ class Reviews extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showModal: false
+      showModal: false,
+      submitingReviews: []
     };
-    this.open = this.open.bind(this);
+    this.setSubmitingStars = this.setSubmitingStars.bind(this);
     this.close = this.close.bind(this);
+  }
+  setSubmitingStars() {
+    var arr = [];
+    for(var i=0; i < 5; i++) {
+      arr.push(<img key={i} src='images/star.png' alt="stars" onClick={this.changeStars.bind(this, i)}/>);
+    }
+    this.setState({submitingReviews: arr});
+    console.log(this.state.submitingReviews);
+    this.setState({showModal: true});
+  }
+
+  changeStars(index, event) {
+      event.preventDefault();
+            let arr = [];
+            console.log(event.target.parentNode);
+            console.log(index);
+            for (var i=0; i<5; i++) {
+              if(i <= index) {
+                arr.push(<img key={i} src="images/star-gray.png" alt="gray star" onClick={this.changeStars.bind(this, i)} />);
+              } else {
+                arr.push(<img key={i} src="images/star.png" alt="white star" onClick={this.changeStars.bind(this, i)} />);
+              }
+            }
+            this.setState({submitingReviews: arr});
   }
 
   getInitialState() {
@@ -20,19 +45,28 @@ class Reviews extends Component {
 
  }
 
- open() {
-    this.setState({showModal: true}, function(){
-      console.log(this.state);
-    });
-  }
+ // open() {
+ //    this.setState({showModal: true});
+ //    this.setSubmitingStars;
+ //  }
 
-  render() { console.log(this.state);
+  render() {
     let reviews;
-    let stars;
-    if(this.props.data && this.state){
-        reviews = this.props.data.map(review => {
+
+    if(this.props.data){
+      reviews = this.props.data.map(review => {
+        let starsArray = [];
         let image = 'images/' + review.image;
-        stars = 'images/star.png';
+        let whiteStar = 'images/' + review.starPath;
+        let grayStar = 'images/' + review.starGrayPath;
+        let stars = review.stars;
+          for (var i=0; i < 5; i++) {
+            if (stars > i) {
+              starsArray.push(<img key={i} src={grayStar} alt="gray star" />);
+            } else {
+                starsArray.push(<img key={i} src={whiteStar} alt="white star" />);
+              }
+          }
         return (
                 <Row key={review.name}>
                   <Col md={2}>
@@ -42,7 +76,7 @@ class Reviews extends Component {
                     </figure>
                   </Col>
                   <Col className="review-p" md={10}>
-                    <h3><strong>{review.title}</strong> {review.date}</h3>
+                    <h3><strong>{review.title}</strong> {review.date} {starsArray}</h3>
                     <p>{review.review}</p>
                   </Col>
                 </Row>
@@ -54,11 +88,11 @@ class Reviews extends Component {
       <Row>
         <Col md={2}></Col>
         <Col md={2}><h1>Reviews</h1></Col>
-        <Col className="review-link" md={4}><Button onClick={this.open} >Write a review on this product</Button></Col>
+        <Col className="review-link" md={4}><Button onClick={this.setSubmitingStars} >Write a review on this product</Button></Col>
 
           <Modal show={this.state.showModal} onHide={this.close}>
               <Modal.Header>
-                <Modal.Title>Please Rate the <strong>Tough Mojo Jacket </strong> <img src={stars} alt="raiting"/><img src={stars} alt="raiting"/><img src={stars} alt="raiting"/><img src={stars} alt="raiting"/><img src={stars} alt="raiting"/></Modal.Title>
+                <Modal.Title>Please Rate the <strong>Tough Mojo Jacket </strong> <span> {this.state.submitingReviews}</span> </Modal.Title>
               </Modal.Header>
               <Modal.Body>
               <Form horizontal>

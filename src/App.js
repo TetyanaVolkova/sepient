@@ -17,6 +17,17 @@ class App extends Component {
   }
 
   componentWillMount(){
+    var a = new XMLHttpRequest();
+    a.open("GET", "reviewsData.json", true);
+    a.send();
+    a.onreadystatechange = function(){
+      if (this.readyState === 4) {
+        console.log(this.responseText);
+        var obj = JSON.parse(this.responseText);
+        console.log(obj);
+      }
+    }
+    console.log(a);
     this.getReviewsData();
   }
 
